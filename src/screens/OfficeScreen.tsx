@@ -2,8 +2,11 @@ import React from 'react';
 import { Text, View, StyleSheet, SafeAreaView, Image} from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import IconBanck from '../assets/Images/icon-bank.png';
-interface Props {}
+import { RootStackParams } from '../navigator/StackNavigator';
+interface Props extends StackScreenProps<RootStackParams, 'OfficeScreen'>{}
 export const OfficeScreen = ({latitude,longitude}:Props) => {
+  console.log(latitude)
+  console.log(longitude)
   return (
     <View>
         <SafeAreaView style={{alignItems:'center', marginTop:40}}>
