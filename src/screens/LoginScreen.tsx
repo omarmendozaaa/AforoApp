@@ -25,7 +25,7 @@ export const LoginScreen = ({navigation}: Props) => {
 
   const { permissions } = useContext( PermissionsContext );
 
-  const onLogin = () => {
+  const onLogin = async () => {
     console.log({documentNumber, password});
     ( permissions.locationStatus === 'granted' ) ?
     navigation.replace('MapScreen') : navigation.navigate('PermissionsScreen');
