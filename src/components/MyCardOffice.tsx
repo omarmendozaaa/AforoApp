@@ -1,8 +1,10 @@
 import React,{} from "react";
+import { StackScreenProps } from '@react-navigation/stack';
 import { View,Text, StyleSheet,Image, SafeAreaView, Button, Alert } from "react-native";
+import { RootStackParams } from '../navigator/StackNavigator';
 import IconBank from '../assets/Images/icon-bank.png'
-interface Props {}
-export const MyCardOffice = ({MyOffice}:Props)=>{
+interface Props extends StackScreenProps<RootStackParams>{}
+export const MyCardOffice = ({MyOffice,navigation}:Props)=>{
     return (
         <View style={{display:'flex', padding:20,borderRadius:3}}>
             <SafeAreaView style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
@@ -11,7 +13,7 @@ export const MyCardOffice = ({MyOffice}:Props)=>{
                         {MyOffice.place}
                     </Text>
                 </SafeAreaView>
-                <SafeAreaView onStartShouldSetResponder={()=>navi} style={{padding:15}}>
+                <SafeAreaView onStartShouldSetResponder={()=>navigation.navigate('OfficeScreen',{latitude:'a',longitude:'f'})} style={{padding:15}}>
                     <Image source={IconBank}/>
                 </SafeAreaView>
             </SafeAreaView>
