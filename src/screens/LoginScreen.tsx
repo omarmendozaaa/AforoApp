@@ -23,17 +23,12 @@ export const LoginScreen = ({navigation}: Props) => {
     password: '',
   });
 
-  // const { permissions } = useContext( PermissionsContext );
-  const { permissions, askLocationPermission } = useContext( PermissionsContext );
+  const { permissions } = useContext( PermissionsContext );
 
   const onLogin = async () => {
     console.log({documentNumber, password});
-    await askLocationPermission;
-    if (permissions.locationStatus == 'granted') {
-      navigation.replace('MapScreen') 
-    }
-    // ( permissions.locationStatus === 'granted' ) ?
-    // navigation.replace('MapScreen') : navigation.navigate('PermissionsScreen');
+    ( permissions.locationStatus === 'granted' ) ?
+    navigation.replace('MapScreen') : navigation.navigate('PermissionsScreen');
     Keyboard.dismiss();
   };
   return (

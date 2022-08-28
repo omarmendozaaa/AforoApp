@@ -13,7 +13,7 @@ export const OfficeScreen = ({latitude,longitude}:Props) => {
       latitude:latitude,
       longitude:longitude
     }
-    console.log(latitude);
+    console.log(body);
     /* url.search = new URLSearchParams(body).toString();
     let res= await fetch(url,{
       method:'get',

@@ -29,7 +29,7 @@ export const MapScreen = ({navigation}:Props) => {
     <View style={{ flex: 1 }}>
       <ScrollView>
         {
-          officeList.map((item,index)=><MyCardOffice key={index} MyOffice={item} eventClick={()=>navigation.navigate('OfficeScreen',{ latitude:'asdasd' ,longitude:'' })}></MyCardOffice> )
+          officeList.map((item,index)=><MyCardOffice key={index} MyOffice={item}></MyCardOffice> )
         }
       </ScrollView>
          {/*  <Map /> */}
