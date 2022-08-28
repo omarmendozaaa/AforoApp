@@ -1,7 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet, SafeAreaView, Image} from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
 import IconBanck from '../assets/Images/icon-bank.png';
-export const OfficeScreen = () => {
+interface Props {}
+export const OfficeScreen = ({latitude,longitude}:Props) => {
   return (
     <View>
         <SafeAreaView style={{alignItems:'center', marginTop:40}}>
