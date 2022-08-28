@@ -38,19 +38,6 @@ export const MyCardOffice = ({MyOffice}:Props)=>{
                 headers:{}
             }).then(res=>res.json())
             .catch(error=>console.log(error));
-            console.log(res);
-            // Alert.alert(
-            //     "Alert Title",
-            //     "My Alert Msg",
-            //     [
-            //       {
-            //         text: "Cancel",
-            //         onPress: () => console.log("Cancel Pressed"),
-            //         style: "cancel"
-            //       },
-            //       { text: "OK", onPress: () => console.log("OK Pressed") }
-            //     ]
-            // );
             Alert.alert('Aforo: '+MyOffice.capacity,'Fuera de Oficina: '+res.cantidadAfuera+'\nEn la oficina: '+res.cantidadAdentro);
         }}>
             <SafeAreaView style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
