@@ -25,7 +25,7 @@ export const StackNavigator = () => {
   return (
     <Stack.Navigator >
       <Stack.Screen name="LoginScreen" options={{title:'', headerShown:false}} component={LoginScreen} />
-      <Stack.Screen name="MapScreen" component={ MapScreen } />
+      <Stack.Screen name="MapScreen" options={{title:'Oficinas'}} component={ MapScreen } />
       <Stack.Screen name="PermissionsScreen" component={ PermissionsScreen } />
       <Stack.Screen name="OfficeScreen" options={{title:'Oficina'}} component={OfficeScreen} />
     </Stack.Navigator>
