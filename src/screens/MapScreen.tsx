@@ -9,7 +9,7 @@ interface Props extends StackScreenProps<RootStackParams, 'MapScreen'>{}
 export const MapScreen = ({navigation}:Props) => {
   return (
     <View style={{ flex: 1 }}>
-          {/* <Map /> */}
+        <Map />
         <Button title = "Go to Oficina" onPress={()=>navigation.navigate('OfficeScreen',{id:0})}/>
     </View>
   );
